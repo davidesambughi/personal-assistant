@@ -9,14 +9,18 @@ All flows are derived directly from the wireframes. Screens not covered by a wir
 Most screens follow one of two structural patterns. The **Sidebar** is common to all screens (except Homepage) and is detailed in its own section.
 
 ### Pattern A: 4-Panel Layout (Complex)
+
 Used for deep data interaction.
+
 - **Top Header:** Global search, notifications, and profile.
 - **Left Sidebar:** App navigation.
 - **Main Content:** The primary information feed.
 - **Right Panel:** AI Assistant context and actions.
 
 ### Pattern B: 2-Panel Layout (Simple)
+
 Used for utility and overview screens.
+
 - **Left Sidebar:** App navigation.
 - **Main Content:** Centered single-column layout.
 
@@ -24,17 +28,17 @@ Used for utility and overview screens.
 
 ## Screens
 
-| Screen | Layout Pattern | Entry Point |
-|---|---|---|
-| Homepage | Custom | App root (unauthenticated) |
-| Dashboard (Inbox) | 4-Panel | After login / sidebar: Inbox |
-| Detailed Email View | 4-Panel | Clicking an email card from Dashboard |
-| Tasks | 2-Panel | Sidebar: Tasks |
-| Daily Digest | 2-Panel | Sidebar: Daily Digest |
-| Settings | 2-Panel | Sidebar: Settings |
-| AI Summaries | Undefined | Sidebar: AI Summaries |
-| Sent | Undefined | Sidebar: Sent |
-| Trash | Undefined | Sidebar: Trash |
+| Screen              | Layout Pattern | Entry Point                           |
+| ------------------- | -------------- | ------------------------------------- |
+| Homepage            | Custom         | App root (unauthenticated)            |
+| Dashboard (Inbox)   | 4-Panel        | After login / sidebar: Inbox          |
+| Detailed Email View | 4-Panel        | Clicking an email card from Dashboard |
+| Tasks               | 2-Panel        | Sidebar: Tasks                        |
+| Daily Digest        | 2-Panel        | Sidebar: Daily Digest                 |
+| Settings            | 2-Panel        | Sidebar: Settings                     |
+| AI Summaries        | Undefined      | Sidebar: AI Summaries                 |
+| Sent                | Undefined      | Sidebar: Sent                         |
+| Trash               | Undefined      | Sidebar: Trash                        |
 
 ---
 
@@ -50,6 +54,7 @@ Homepage
 ```
 
 **Already logged in:**
+
 ```
 App opens → Dashboard (Inbox) directly
 ```
@@ -59,10 +64,12 @@ App opens → Dashboard (Inbox) directly
 ## Flow 2 — Dashboard (Inbox)
 
 **Layout:** Pattern A (4-Panel)
+
 - **Sidebar:** Standard (see [Global Sidebar](#sidebar-navigation-global))
 - **Right Panel:** AI Assistant active
 
 ### Top Header
+
 ```
 Header
   ├── Search bar → "Search emails, people, topics..." input
@@ -72,6 +79,7 @@ Header
 ```
 
 ### Main panel
+
 ```
 Dashboard
   ├── Urgent section (with counter, e.g., "3")
@@ -85,6 +93,7 @@ Dashboard
 ```
 
 ### Right panel — AI Assistant
+
 ```
 AI Assistant panel
   ├── Today's Summary card
@@ -105,10 +114,12 @@ AI Assistant panel
 ## Flow 3 — Detailed Email View
 
 **Layout:** Pattern A (4-Panel)
+
 - **Sidebar:** Standard (see [Global Sidebar](#sidebar-navigation-global))
 - **Right Panel:** AI Assistant active (context-aware)
 
 ### Top Header
+
 ```
 Header
   ├── "Back to Inbox" (top left) → Dashboard (Inbox)
@@ -119,12 +130,13 @@ Header
 ```
 
 ### Main Content
+
 ```
 Email View
-  ├── Subject Header: "Product Meeting Tomorrow" + Priority Tags (Urgent, Work)
+  ├── Subject Header: "<title>" + Priority Tags (Urgent, Work)
   │
   ├── Sender Info Row
-  │     ├── Profile Image 
+  │     ├── Profile Image
   │     ├── Name & Email address → "to me" dropdown
   │     └── Action Icons (far right)
   │           ├── Star icon → (toggles star)
@@ -141,6 +153,7 @@ Email View
 ```
 
 ### Right panel — AI Assistant
+
 ```
 AI Assistant panel
   ├── Suggested Replies
@@ -163,10 +176,12 @@ AI Assistant panel
 ## Flow 4 — Tasks
 
 **Layout:** Pattern B (2-Panel)
+
 - **Sidebar:** Standard (see [Global Sidebar](#sidebar-navigation-global))
 - **Right Panel:** Not present
 
 ### Main Content
+
 ```
 Tasks screen
   ├── Tab: All → shows all tasks
@@ -185,10 +200,12 @@ Tasks screen
 ## Flow 5 — Daily Digest
 
 **Layout:** Pattern B (2-Panel)
+
 - **Sidebar:** Standard (see [Global Sidebar](#sidebar-navigation-global))
 - **Right Panel:** Not present
 
 ### Main Content
+
 ```
 Daily Digest screen
   ├── "Send Digest Email" button (top right) → sends digest to user's email
@@ -212,10 +229,12 @@ Daily Digest screen
 ## Flow 6 — Settings
 
 **Layout:** Pattern B (2-Panel)
+
 - **Sidebar:** Standard (see [Global Sidebar](#sidebar-navigation-global))
 - **Right Panel:** Not present
 
 ### Main Content
+
 ```
 Settings screen
   ├── Connected Account
